@@ -1,0 +1,23 @@
+body{
+
+}
+.tipCal{
+    display: inline-block;
+    border: solid black;
+    text-align: center;
+    background-color: darkolivegreen;
+    font-size: 40px;
+    margin-left: 30%;;
+
+    
+}
+.jumbotron {
+    text-align: center;
+    font-size: 100px;
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThsm8Iuvo87AnB0DGxsGs3rkGEQlU8wiFUZcymp_Aw8MSa36jL);
+    background-size: contain;
+    text-shadow: 5px 5px darkolivegreen;
+
+
+
+}

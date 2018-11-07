@@ -1,0 +1,43 @@
+body{
+    background-color: cyan
+}
+.jumbotron{
+    font-size: 75px;
+    text-align: center;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1DmbNZkQfatmwSHWBqi6u7VV4w7zwBCmfIPEy_wumTif8rg5R)
+
+}
+.tictactoe{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr);
+    padding: 10px;
+    font-size: 46px;
+    height: 500px;
+    width: 500px;
+    margin-left: 27%;
+    background-color: white
+    
+    
+}
+.block{
+    border: solid black;
+    padding: 20px;
+    
+}
+.block:hover{
+    background-color: black
+
+}
+#turn{
+    text-align: center;
+    font-size: 50px;
+    display: block;
+    width: 100%;
+}
+#replay{
+    font-size: 30px;
+    margin-left: 45%;
+    background-color: cadetblue
+
+}
