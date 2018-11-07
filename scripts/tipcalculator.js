@@ -5,8 +5,6 @@ $(document).ready(function(){
        total = Math.round(total*100)/100;
        total=total.toFixed(2);
         alert ('Tip Your Waiter :' + "" + "$" + total);
-    });
-});
-
+    })
     
-
+});
