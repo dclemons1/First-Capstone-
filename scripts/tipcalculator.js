@@ -7,4 +7,9 @@ $(document).ready(function(){
         alert ('Tip Your Waiter :' + "" + "$" + total);
     })
     
-});
+})
+function Reset(){
+    total = ""
+    
+
+}

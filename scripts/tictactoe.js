@@ -3,6 +3,7 @@ $(document).ready(function () {
     let player2 = "O";
     let currentTurn = 1;
     let movesMade = 0;
+    let counter = 0;
 
     let sqr = $(".block");
 
@@ -12,18 +13,19 @@ $(document).ready(function () {
             if (currentTurn === 1) {
                 event.target.innerHTML = player1;
                 event.target.style.color = "blue";
-                turn.innerHTML = "O Turn"
-                WinCombos()
+                turn.innerHTML = "O Turn" 
+                WinCombos(counter++);
                 currentTurn++;
             } else {
                 event.target.innerHTML = player2;
                 event.target.style.color = "red";
-                turn.innerHTML = "X Turn";
-                WinCombos();
+                turn.innerHTML = "X Turn"
+                WinCombos(counter++);
                 currentTurn--;
             }
 
         }
+
     
 
     })
@@ -31,19 +33,32 @@ $(document).ready(function () {
         sqr.each(function(){
             $(this).html("").removeAttr("style");
             turn.innerHTML = "Play";
+
         
         })
 
 
 
     });
-})
-
+});
+let counter1 = 0
+let counter2 = 0
 function winner(b1, b2, b3) {
+    
+    if(b1.innerHTML==="X"){
+        counter1++
+        turn.innerHTML = b1.innerHTML + " Won!!" + " Score = " + counter1
+    
+    }
+    if(b1.innerHTML==="O"){
+        counter2++
+        turn.innerHTML = b1.innerHTML + " Won!!" + " Score = " + counter2
+    }
+
     b1.style.background = "yellow";
     b2.style.background = "yellow";
     b3.style.background = "yellow";
-    turn.innerHTML = b1.innerHTML + " Won!!";
+    
 
 }
 function WinCombos() {
@@ -76,6 +91,7 @@ function WinCombos() {
         winner(sqr2, sqr5, sqr8);
     else if (sqr3.innerHTML !== "" && sqr3.innerHTML === sqr6.innerHTML && sqr3.innerHTML === sqr9.innerHTML)
         winner(sqr3, sqr6, sqr9);
+    
 
     
 }
