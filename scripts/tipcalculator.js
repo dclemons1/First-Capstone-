@@ -9,7 +9,11 @@ $(document).ready(function(){
     
 })
 function Reset(){
-    total = ""
-    
+    document.getElementById("amountofbill").value = "";
+    document.getElementById("totalpplsplitting").value = "";
+    document.getElementById("tip").value = "";
+    let ele = document.getElementsByName("tipPercent");
+   for(var i=0;i<ele.length;i++)
+      ele[i].checked = false;
 
 }
